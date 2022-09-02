@@ -15,8 +15,9 @@ class ValidationTextWidget extends StatelessWidget {
     return new Row(
       children: [
         new Container(
-          width: SizeConfig.width! * 0.03,
-          height: SizeConfig.width! * 0.03,
+          padding: EdgeInsets.only(left:20.0),
+          width: SizeConfig.width! * 0.02,
+          height: SizeConfig.width! * 0.02,
           child: new CircleAvatar(
             backgroundColor: color,
           ),
