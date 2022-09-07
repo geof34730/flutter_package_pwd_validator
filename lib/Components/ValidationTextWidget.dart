@@ -12,12 +12,44 @@ class ValidationTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
 
-        Text(
-            text.replaceFirst("-", value.toString())+', ',
+    return new Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+
+      children: [
+        new Container(
+          padding: EdgeInsets.only(left:0.1),
+          width: SizeConfig.width! * 0.01,
+          height: SizeConfig.width! * 0.01,
+          child: new CircleAvatar(
+            backgroundColor: color,
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 5,right:5),
+          child: new Text(
+            text.replaceFirst("-", value.toString()),
             style:
-                new TextStyle(fontSize: SizeConfig.width! * 0.04, color: color),
-          );
+            new TextStyle(fontSize: SizeConfig.width! * 0.04, color: color),
+          ),
+        )
+      ],
+    );
+
+
+  }
+}
+
+class MyBullet extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      height: 5.0,
+      width: 5.0,
+      decoration: new BoxDecoration(
+        color: Colors.black,
+        shape: BoxShape.circle,
+      ),
+    );
   }
 }
