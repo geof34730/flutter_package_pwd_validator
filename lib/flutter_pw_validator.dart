@@ -154,7 +154,7 @@ class _FlutterPwValidatorState extends State<FlutterPwValidator> {
       width: SizeConfig.width,
       height: widget.height,
       child: new Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           new Flexible(
             flex: 3,
@@ -175,10 +175,12 @@ class _FlutterPwValidatorState extends State<FlutterPwValidator> {
             ),
           ),
           new Flexible(
-            flex: 7,
-            child: new Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
+            flex: 3,
+            child:Padding(
+              padding: EdgeInsets.only(top:20.00),
+              child:Wrap(
+                crossAxisAlignment: WrapCrossAlignment.start,
+                runAlignment : WrapAlignment.start,
                 //Iterate through the condition map entries and generate new ValidationTextWidget for each item in Green or Red Color
                 children: conditionsHelper.getter()!.entries.map((entry) {
                   int? value;
@@ -201,8 +203,8 @@ class _FlutterPwValidatorState extends State<FlutterPwValidator> {
                     text: entry.key,
                     value: value,
                   );
-                }).toList()),
-          )
+                }).toList())
+          ))
         ],
       ),
     );

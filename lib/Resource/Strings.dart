@@ -4,13 +4,13 @@ class FlutterPwValidatorStrings {
   @override
   final String atLeast = 'Au moins - caractère(s)';
   @override
-  final String normalLetters = '- lettre(s)';
+  final String normalLetters = 'Au moins - lettre(s)';
   @override
-  final String uppercaseLetters = '- Lettre(s) majuscule(s)';
+  final String uppercaseLetters = 'Au moins - Lettre(s) majuscule(s)';
   @override
-  final String numericCharacters = '- Chiffre(s)';
+  final String numericCharacters = 'Au moins - Chiffre(s)';
   @override
 
-  final String specialCharacters = '- Caractère(s) spéci(al/aux)';
+  final String specialCharacters = 'Au moins - Caractère(s) spéci(al/aux)';
 
 }

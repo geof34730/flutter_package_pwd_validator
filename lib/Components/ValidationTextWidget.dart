@@ -12,25 +12,12 @@ class ValidationTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Row(
-      children: [
-        new Container(
-          padding: EdgeInsets.only(left:20.0),
-          width: SizeConfig.width! * 0.02,
-          height: SizeConfig.width! * 0.02,
-          child: new CircleAvatar(
-            backgroundColor: color,
-          ),
-        ),
-        Padding(
-          padding: EdgeInsets.only(left: SizeConfig.width! * 0.03),
-          child: new Text(
-            text.replaceFirst("-", value.toString()),
+    return
+
+        Text(
+            text.replaceFirst("-", value.toString())+', ',
             style:
                 new TextStyle(fontSize: SizeConfig.width! * 0.04, color: color),
-          ),
-        )
-      ],
-    );
+          );
   }
 }
